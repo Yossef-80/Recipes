@@ -1,0 +1,91 @@
+.container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .cancelpage{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .cancelpage:hover{
+    background-color: red;
+    color: white;
+  }
+  
+  h1 {
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="file"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"]{
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .ingredient:hover,
+  .add-step:hover,
+  button[type="submit"]:hover{
+    background-color: #39DB4A;
+  }
+  
+  .ingredients-list,
+  .cooking-steps {
+    margin-bottom: 20px;
+  }
+  
+  .ingredients-list input[type="text"],
+  .cooking-steps textarea {
+    margin-top: 5px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,97 @@
+<app-header></app-header>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+
+<section class="body">
+  
+    <div class="sidediv">
+      <span class="filter">Filters</span>
+      <i class="fa-solid fa-sliders"></i>
+
+      <hr />
+
+      <label for="dropmenu" style="font-weight: 700">Cuisine :</label>
+      <i class="fa-solid fa-arrow-down"></i>
+      <label class="container" >American
+        <input type="radio" (change)="selectCuisine('American')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Chinese
+        <input type="radio" (change)="selectCuisine('Chinese')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Italian
+        <input type="radio" (change)="selectCuisine('Italian')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">England
+        <input type="radio" (change)="selectCuisine('England')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">All
+        <input type="radio" (change)="selectCuisine('')"  name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <h4 class="active">See all</h4>
+      <hr />    
+      <label class="container">Protien
+        <input type="radio" (change)="filterByIngredientsType('Protien')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Fruits
+        <input type="radio" (change)="filterByIngredientsType('Fruits')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Vegetables
+        <input type="radio" (change)="filterByIngredientsType('Vegetables')" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">All
+        <input type="radio" (change)="filterByIngredientsType('')"  name="radio">
+        <span class="checkmark"></span>
+      </label>
+    <!--  <div class="parentofFood">
+        <label for="dropmenu" style="font-weight: 700">Ingredients :</label>
+        <i class="fa-solid fa-arrow-down arrowIngred"></i>
+        <div class="itemsFood"><p class="food">Protien</p></div>
+        <div class="itemsFood activee"><p class="food">Vegetables</p></div>
+        <div class="itemsFood"><p class="food">Fruits</p></div>
+      </div>-->
+      <hr />
+      <div class="prepare">
+        <label for="" class="labelPrepare"
+          >Preparation Time (Minutes) :
+        </label>
+        <input type="text" class="minInput" placeholder="type in mins..." [(ngModel)]="filterTime"(input)="filterRecipeInTime(filterTime)" />
+      </div>
+      <hr />
+
+      <button class="apply" style="visibility: hidden;">Apply Filter</button>
+    </div>
+    <div class="rigth">
+      <div class="searchContent">
+        <input type="text" class="search" [(ngModel)]="searchTerm" (input)="searchRecipe(searchTerm)" />
+        <div class="SearchIconDiv">
+          <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+        </div>
+      </div>
+      <!--[routerLink]="i === 1 ? ['/secondnutrition', food.id] : i === 2 ? ['/thirdnutrition', food.id] : ['/nutrition', food.id]" -->
+      <div class="parent">
+        <div class="childs" *ngFor="let food of list_of_food; let i = index"  [routerLink]="['/item-detail', food.key]"   >
+          <div class="images">
+            <img class="meal1" [src]="food.img"  alt="" />
+          </div>
+          <p class="para" [innerText]="food.nameOfFood" ></p>  
+          <p class="para"  [innerText]="food.countryOfFood"></p>
+          <p class="mins" [innerText]="food.duration"></p>
+          
+          <p class="rate" [innerText]="food.rating||0"></p>
+          <i class="fa-solid  fa-star "></i>
+      </div>
+    </div>
+  

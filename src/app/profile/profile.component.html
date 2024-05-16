@@ -1,0 +1,83 @@
+<app-header></app-header>
+
+    <div class="profile">
+        <div class="profile-header">
+            <img [src]="user_data.img" alt="Profile Picture" class="profile-picture">
+            <div class="profile-info">
+                <div class="username-row">
+                    <h1 class="username">{{ user_data.userName}}</h1>
+                    <button class="addRecipe" [routerLink]="['/add-post']">Post recipes</button>
+                    <!-- <button class="editProfile" [routerLink]="['/edit-profile']">Edit</button> -->
+                    <button (click)="toggleEditProfile()" class="editProfile">Edit</button>
+                </div>
+                <!-- <p class="bio">This is my bio.</p> -->
+                <div class="row">
+                    <div class="col">
+                        <p>{{ user_data.recipeCount }}</p>
+                        <h2>recipes</h2>
+                    </div>
+                    <div class="col">
+                        <p>{{ user_data.followers }}</p>
+                        <h2 (click)="toggleFollowersList()" >Followers</h2>
+                    </div>
+                    <div class="col">
+                        <p>{{ user_data.following }}</p>
+                        <h2 (click)="toggleFollowingList()" >Following</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider">
+        <p class="divide"> RECIPES</p>
+        <div class="recipes">
+            <div class="recipe" *ngFor="let recipe of add">
+                <img [src]="recipe.img" alt="Recipe" class="recipe-image">
+                <p class="recipe-name">{{ recipe.nameOfFood }}</p>
+                <p class="recipe-country">{{ recipe.countryOfFood }}</p>
+                <p class="recipe-time">{{ recipe.duration }} <span class="min">mins &#9201;</span> <span class="star">&#9733; </span> <span class="rating">{{ recipe.rating| number:'1.1-1' }}</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isEditProfileOpen" class="edit-profile">
+      <button (click)="toggleEditProfile()" class="cancelpage">✖</button>
+        <h1>Edit Profile</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name"  [(ngModel)]="updatedUserName" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="form-group">
+                <label for="photo" >Profile Photo</label>
+                <input type="file" id="photo" (change)="onFileSelected($event)" >
+            </div>
+            <div class="sava-cancel">
+              <button type="submit" class="save" (click)="updateUserData()" (click)="toggleEditProfile()">Save Changes</button>
+              <button (click)="toggleEditProfile()" class="cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div *ngIf="isFollowingListOpen" class="edit-profile">
+        <button (click)="toggleFollowingList()" class="cancelpage">✖</button>
+          <h1>Following</h1>
+            <div class="Thecard" *ngFor="let user of followingList; let i = index">
+                <img [src]="user.img" alt="Profile Picture" class="profile-picture">
+                <h3>{{user.userName}}</h3>
+                <button class="deleteProfile" (click)="unfollowUser(i)" >delete</button>
+            </div>
+      </div>
+      <div *ngIf="isFollowersListOpen" class="edit-profile">
+        <button (click)="toggleFollowersList()" class="cancelpage">✖</button>
+          <h1>Followers</h1>
+            <div class="Thecard" *ngFor="let user of followerList; let i = index">
+                <img [src]="user.img" alt="Profile Picture" class="profile-picture">
+                <h3>{{user.userName}}</h3>
+               
+            </div>
+      </div>
+  
+
+<!--<app-footer></app-footer>-->
+

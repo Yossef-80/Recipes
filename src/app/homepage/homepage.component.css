@@ -1,0 +1,82 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and font styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+
+
+.section {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-side, .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px; /* Adjusted padding */
+  }
+  
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 20px 40px; /* Adjusted padding */
+  }
+  
+  .right-side {
+    
+    flex: .5;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 50%;
+    margin-top: 160px;
+    margin-right: 80px;
+    background-color: #85bd15; /* Green background color */
+    border-radius: 50%; /* Makes the border circular */
+    padding:0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Reduced margin */
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px; /* Reduced margin */
+    text-align: center; /* Center text */
+  }
+  
+  .buttons {
+    margin-bottom: 20px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: #85bd15; /* Changed button background to green */
+    border-radius: 30px; /* Added border-radius to the last button */
+    color: #fff; /* Changed button text color to white */
+    border: none;
+  }
+  
+  
+  .left-side > * {
+    margin-bottom: 60px; /* Added margin between elements */
+  }
+  
+  .right-side img {
+    max-width: 120%;
+    height: 180%;
+  }
+  

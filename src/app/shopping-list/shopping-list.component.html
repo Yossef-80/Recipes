@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<h1 class="title">SHOPPING LIST</h1>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+          <th>Recipes</th>
+
+          <th>Ingredients</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.recipe }}</td>
+          <td>{{ item.ingredient }}</td>
+        </tr>
+      </tbody>
+</table>

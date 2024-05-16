@@ -1,0 +1,119 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Sedan", serif;
+
+  
+  }
+  
+  .header {
+    background-color: #ffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo_photo {
+    width: 75px;
+    border: solid 1px #000;
+    border-radius: 10px;
+  }
+  
+  .headerItems ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+  
+  .headerItems ul  li  {
+    margin-right: 50px;
+    cursor: pointer;
+  }
+  .headerItems ul  li:hover  {
+    color: rgb(133, 189, 21);
+    
+  }
+  .headerItems a{
+    text-decoration: none;
+    color: #000;
+  }
+  .fa-heart,
+    .fa-cart-shopping,
+    .fa-user {
+      margin-left: 10px;
+      font-size: 20px;
+      color: black;
+      cursor: pointer;
+    }
+  .fa-user:hover{
+    color: rgb(133, 189, 21);
+  }
+  
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Sedan", serif;
+    /* font-family: Arial, sans-serif; */
+    /* font-family: "Gill Sans Extrabold", sans-serif; */
+
+  }
+
+  .header {
+    background-color: #ffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* .active {
+    color: rgb(133, 189, 21);
+  } */
+  .logo_photo {
+    width: 75px;
+    border: solid 1px #000;
+    border-radius: 10px;
+  }
+
+  .headerItems ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  .headerItems ul  li  {
+    margin-right: 50px;
+    cursor: pointer;
+  }
+  .headerItems ul  li:hover  {
+    color: rgb(133, 189, 21);
+    /* margin-right: 50px;
+    cursor: pointer; */
+  }
+  .headerItems a{
+    text-decoration: none;
+    color: #000;
+  }
+  .fa-heart,
+    .fa-cart-shopping,
+    .fa-user {
+      margin-left: 10px;
+      font-size: 20px;
+      color: black;
+      cursor: pointer;
+    }
+  .fa-regular:hover,
+  .fa-cart-shopping:hover{
+    color: rgb(133, 189, 21);
+  }

@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<p class="head"> FAVORITES</p>
+<hr class="divider">
+
+<div class="recipes" >
+  <div class="recipe" *ngFor="let recipe of recipes">
+      <img [src]="recipe.img" alt="Recipe 1" class="recipe-image">
+      <p class="recipe-name">{{recipe.nameOfFood}}</p>
+      <p class="recipe-country">{{recipe.countryOfFood}}</p>
+      <p class="recipe-time">{{recipe.duration}} <span class="min">mins</span> <span class="star">&#9733;  </span>{{recipe.rating}} </p>
+  </div>
+ <!-- <div class="recipe">
+      <img src="../../assets/images/pasta22.jpg" alt="Recipe 2" class="recipe-image">
+      <p class="recipe-name">Spaghetti Bolognese</p>
+      <p class="recipe-country">Italy</p>
+      <p class="recipe-time">45 <span class="min">mins</span>  <span class="star">&#9733; </span>  4.0</p>
+  </div>-->
+</div>

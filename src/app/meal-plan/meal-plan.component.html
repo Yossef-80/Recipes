@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<p class="head"> Meal-planning</p>
+<p class="message" [ngClass]="{ 'success-message': addRecipeMessage === 'Recipe added successfully', 'error-message': addRecipeMessage !== 'Recipe added successfully' }">{{ addRecipeMessage }}</p>
+
+
+<hr class="divider">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="container">
+    <div class="days-row">
+      <div class="day" *ngFor="let day of days" (click)="selectDay(day)" [ngClass]="{'selected': selectedDay === day}">
+        {{ day }}
+      </div>
+  </div>
+  <div class="meals-row">
+    <button (click)="addMeal('Breakfast')"><i class="fas fa-plus"></i> Add Breakfast</button>
+    <button (click)="addMeal('Lunch')"><i class="fas fa-plus"></i> Add Lunch</button>
+    <button (click)="addMeal('Dinner')"><i class="fas fa-plus"></i> Add Dinner</button>
+  </div>
+</div>
+<br>
+<hr>
+<!-- <div class="recipes">
+  <div class="recipe" *ngFor="let food of list_of_food; let i = index" >
+    <img class="recipe-image" [src]="food.img"  alt="" />
+    <p class="recipe-name" [innerText]="food.nameOfFood" ></p>
+    <p class="recipe-country"  [innerText]="food.countryOfFood"></p>
+    <p class="recipe-time" [innerText]="food.duration"> </p>
+    <span class="star">&#9733; </span>
+    <span class="rating" [innerText]="food.rating"></span>
+  </div>
+</div> -->
+<div class="recipes">
+  <div class="recipe" *ngFor="let food of list_of_food; let i = index" [class.selectedRec]="i === selectedRecipeIndex" (click)="selectRecipe(i, food)">
+    <img class="recipe-image" [src]="food.img"/>
+    <p class="recipe-name">{{ food.nameOfFood }}</p>
+    <p class="recipe-country">{{ food.countryOfFood }}</p>
+    <p class="recipe-time">{{ food.duration }}</p>
+    <span class="star">&#9733;</span>
+    <span class="rating">{{ food.rating }}</span>
+  </div>
+</div>

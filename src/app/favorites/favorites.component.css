@@ -1,0 +1,72 @@
+.head{
+    text-align: center;
+    color: #39DB4A;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -10px;
+  }
+  
+  .divider {
+    border-top: 1px solid #ddd; /* Adjust the color and style as needed */
+    margin: 20px 0; /* Add margin for spacing */
+    margin-top: -20px;
+  }
+  
+  .recipes { /* Changed "posts" to "recipes" */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 10px 40px 10px 40px;
+  }
+  
+  .recipe { /* Changed "post" to "recipe" */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+  
+  }
+  
+  .recipe-image { /* Changed "post-image" to "recipe-image" */
+    width: 100%; /* Ensures the image fills its container */
+    height: 260px; /* Adjust the height as needed */
+    border-radius: 15px;
+    object-fit: fill; /* Ensures the image covers its container */
+  }
+  
+  .recipe-name{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .recipe-country { /* Changed "post-caption" to "recipe-caption" */
+    padding-left: 10px;
+    margin-top: -10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .recipe-time{
+    padding-left: 10px;
+    margin-top: -12px;
+  }
+  
+  .min {
+    color: red;
+  }
+  
+  
+  .star {
+    right: 150px;
+    font-size: 16px;
+    color: gold;
+    padding-left: 220px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .rating {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  

@@ -1,0 +1,151 @@
+<app-header></app-header>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <section class="FoodHeader">
+        <span class="fattoush" [innerText]="item?.nameOfFood"></span>
+        <p class="fa-regular fa-heart likes" (click)="putLike()"  >{{item?.likes||0}}</p>
+        <br />
+        <div class="chinaANDcook">
+          <i class="fa-regular fa-clock"></i>
+          <span class="cooktime" [innerText]="item?.duration"></span>
+          <i class="fa-solid fa-utensils"> :</i>
+          <span class="cooktime" [innerText]="item?.countryOfFood"></span>
+        </div>
+      </section>
+      
+      <section>
+        <button type="button" class="submitBtn" (click)="AddToFavourite()" >Add To Favourite</button>
+        <button type="button" class="submitBtn" (click)="FollowBtn()">Follow</button>
+          <div class="parentdiv">
+  
+          
+        <div class="sidediv" >
+           
+          <p class="NuFacts">Nutrition Facts</p>
+          <br />
+          <div *ngFor="let food of item?.nutrition_facts|keyvalue">
+             <span class="info">{{food.value }} </span>
+         <!-- <span class="infoNums1">{{food.value}}</span>-->
+          <hr />
+          </div>
+         
+          
+          
+        </div>
+        <div class="IMGparent">
+              <img class="fatIMG" [src]="item?.img" alt="">
+        </div>
+      </div>
+      </section>
+  
+      <section class="down">
+          <div class="downWords">
+      <!--      <p><b> ABOUT MEAL :</b>  Fattoush salad is a vibrant Levantine dish, a medley of fresh vegetables, herbs, and crispy pita bread. Typically, it includes tomatoes, cucumbers, radishes, and lettuce, dressed with a tangy mix of lemon juice, olive oil, and sumac. Its defining feature is toasted or fried pieces of pita bread, adding crunch and flavor. Often garnished with parsley and mint, it offers a refreshing contrast of textures and tastes. Fattoush is both nutritious and flavorful, making it a beloved staple in Middle Eastern cuisine, perfect for a light and satisfying meal.</p>
+      -->
+      </div>
+      </section>
+  
+  
+  
+      <section class="SecondContent">
+          <div class="IngredParent">
+              <p class="ingHeader">Ingredients</p>
+              <div *ngFor="let food of item?.ingredients |keyvalue">
+                <i class="fa-solid fa-circle-check firstactive"></i>
+              <span [innerText]="food.value"> </span>
+              <hr>
+              </div>
+              
+              
+          </div>
+  
+  
+      </section>
+  
+  
+  <section>
+      <div class="cookingSteps" >
+          <p class="headOfSteps">Cooking Steps</p>
+  
+          <div class="stepsChilds" *ngFor="let food of item?.cooking_steps|keyvalue">
+              <i class="fa-regular fa-circle"></i>
+              <i class="fa-solid fa-1 numofsteps"> . </i>
+                  <span class="headforchilds">{{food.value}}</span>
+                 <!-- <p class="step">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur tempore dolor sint, delectus quis quasi velit tempora amet quia sequi asperiores placeat dolorum repudiandae voluptates architecto, dolorem temporibus quibusdam provident? Aliquid, eos? Omnis molestiae dolore cum, mollitia ullam alias ea eius ducimus optio, hic, excepturi assumenda distinctio quod ipsam corporis.</p>-->
+              <hr>
+  
+  
+          </div>
+        
+          
+  
+  
+  
+      </div>
+  
+  </section> 
+  <section>
+    <h1 class="titles">Reviews</h1>
+  <div class="wrapper">
+		
+		<div class="review-card" *ngFor="let food of reviews">
+			<div class="header-content">
+				
+				<div class="info">
+
+					<h4 [innerText]="food.username"></h4>
+          
+				</div>
+			</div>
+			<div class="single-review">
+				<p>{{food.comment}}</p>
+			</div>
+			<div class="review-footer">
+				<div class="rating">
+					
+          <span >{{food.rate}}</span> 
+          <span class="active">★</span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+    <h1 class="titles">How Would You Rate this Recipe?</h1>
+    <div class="ratecomponent">
+ <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5"[(ngModel)]="selectedRating" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" [(ngModel)]="selectedRating"/>
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" [(ngModel)]="selectedRating"/>
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" [(ngModel)]="selectedRating"/>
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" [(ngModel)]="selectedRating"/>
+        <label for="star1" title="text">1 star</label>
+      </div>
+    </div>
+
+   
+       
+        <div class="textArea"> <h5 >Add detailed review</h5>
+            <textarea placeholder="your experience" [(ngModel)]="ReviewRating"></textarea>
+            <br>
+            <input type="button" class="submitBtn" value="Submit" (click)="sendReview()">
+
+        </div>
+        
+
+     
+
+
+    
+    </section>
+    <app-footer></app-footer>

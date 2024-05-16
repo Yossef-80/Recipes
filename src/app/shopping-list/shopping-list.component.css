@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+.table {
+    width: 80%; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    border: 1px solid #000;
+  }
+ 
+  th, td {
+    padding: 8px; 
+    text-align: center; 
+    border-bottom:1px solid #000 ;
+
+  }
+  
+  thead th {
+    background-color: #ffffff; 
+    font-weight: bold;
+  }
+ .title{
+    margin: 0 auto; 
+    text-align: center; 
+  }
+

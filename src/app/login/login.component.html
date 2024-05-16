@@ -1,0 +1,71 @@
+<!-- <div class="container">
+    <h2>Welcome Back!</h2>
+    <form>
+      <label for="user">Username</label>
+      <input type="text" id="user" placeholder="Enter your username" required>
+      <label for="pass">Password</label>
+      <input type="password" id="pass" placeholder="Enter your password" required>
+      <button  type="submit">Login</button>
+      <button type="button" (click)="signInwithgoogle()">Sign In with Google</button>
+      <button type="button" (click)="navigateToRegister()">Sign up</button>
+
+    </form>
+  </div>
+   -->
+
+<!-- 
+   <div class="container">
+    <h2>Welcome Back!</h2>
+    <form (ngSubmit)="login(email.value, pass.value)">
+        <label for="user">Email</label>
+        <input #email type="email" id="user" placeholder="Enter your email" required>
+
+        <label for="pass">Password</label>
+        <input #pass type="password" id="pass" placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+
+        <button type="button" (click)="signInwithgoogle()">Sign In with Google</button>
+        
+        <button type="button" (click)="navigateToRegister()">Sign up</button>
+    </form>
+</div>
+
+
+ -->
+ <div class="body">
+  <div class="sign_in">
+      <div class="img_sign">
+          <img src="../../assets/images/HomeFood.png" alt="photo" />
+      </div>
+      <div class="sign_content">
+          <h1>Sign in to Food</h1>
+          <form>
+              <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Enter your Email" name="email" [(ngModel)]="email" />
+              </div>
+
+              <div class="mb-3">
+                  <input type="password" class="form-control" placeholder="Enter your Password" name="password" [(ngModel)]="password" />
+              </div>
+
+              <div class="form_rem_for">
+                  <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  </div>
+              </div>
+              <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+
+              <button (click)="signinwithgoogle()" class="btn btn-secondary mt-3">
+                Sign In with Google
+              </button>
+
+              <p class="p_black">
+                  Don't have an account?
+                  <a [routerLink]="'../register'">Sign up</a>
+              </p>
+          </form>
+      </div>
+  </div>
+</div>

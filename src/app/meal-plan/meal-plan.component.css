@@ -1,0 +1,150 @@
+.head{
+    text-align: center;
+    color: #39DB4A;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .message{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .success-message {
+    color: #39DB4A;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  
+  .divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    margin-top: -20px;
+  }
+  
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .days-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .day {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .selected {
+    color: #39DB4A;
+  }
+  
+  .selected-btn {
+    background-color: #39DB4A;
+  }
+  
+  .meals-row {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: rgba(220, 216, 216, 0.496);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .meals-row button:hover{
+    background-color: #39DB4A;
+  }
+  
+  
+  
+  .recipes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .recipe {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    /* Ensures the image fills its container */
+    height: 260px;
+    /* Adjust the height as needed */
+    border-radius: 15px;
+    object-fit: fill;
+    /* Ensures the image covers its container */
+  }
+  
+  .recipe-name {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .recipe-country {
+    padding-left: 10px;
+    margin-top: -10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .recipe-time {
+    padding-left: 10px;
+    margin-top: -12px;
+  }
+  
+  .recipe-time span.min {
+    color: red;
+  }
+  
+  .star {
+    position: absolute;
+    font-size: 20px;
+    color: gold;
+    padding: 0 30px 15px 0;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    /* Align text to the right */
+    vertical-align: bottom;
+    /* Align text to the top */
+  }
+  
+  .rating {
+    position: absolute;
+    padding: 0 7px 16px 0;
+    font-size: 16px;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    /* Align text to the right */
+    vertical-align: bottom;
+  }
+  
+  
+  .selectedRec {
+    border: 2px solid #39DB4A; /* Example border style */
+  }

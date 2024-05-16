@@ -1,0 +1,48 @@
+<!--<div class="container">
+    <h2>Create Account</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <label for="name">Name</label>
+        <input formControlName="name" type="text" id="name" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input formControlName="email" type="email" id="email" placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" id="password" placeholder="Enter your password">
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input formControlName="confirmPassword" type="password" id="confirmPassword" placeholder="Confirm your password">
+
+        <label for="address">Address</label>
+        <input formControlName="address" type="text" id="address" placeholder="Enter your address">
+
+        <button type="submit" [disabled]="registerForm.invalid">Create Account</button>
+    </form>
+</div>
+-->
+<div class="body">
+    <div class="sign_up">
+        <div class="left">
+            <img src="../../assets/images/HomeFood.png" alt="Food Image">
+        </div>
+        <div class="right">
+            <h1>Sign Up to Food</h1>
+            <form (submit)="register()">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter your Name" [(ngModel)]="name" name="name" required>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Enter your Email" [(ngModel)]="email" name="email" required>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <input type="password" class="form-control" placeholder="Enter your Password" [(ngModel)]="password" name="password" required>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-info">Sign Up</button>
+                <p class="p_black">Already have an account? <a [routerLink]="'../login'">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+  </div>

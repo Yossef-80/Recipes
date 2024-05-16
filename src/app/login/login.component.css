@@ -1,0 +1,148 @@
+
+/*
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+  }
+  
+ 
+  h2 {
+    font-size: 2rem; 
+    margin-bottom: 20px; 
+    color: #333; 
+  }
+  
+ 
+  form {
+    width: 300px; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  form label {
+    display: block;
+    margin-bottom: 5px; 
+    color: #555; 
+  }
+  
+ 
+  form input {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+  }
+  
+ 
+  form button {
+    width: 100%;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    font-weight: bold; 
+  }
+  
+  
+  form button:hover {
+    background-color: #0056b3; 
+  }
+  */
+  /* Body container */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+/* Sign in container */
+.sign_in {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ width: 800px;
+}
+.img_sign{
+  width: 50%;
+  
+}
+/* Image section */
+.img_sign img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Sign content section */
+.sign_content {
+  padding: 20px;
+}
+
+/* Form */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Google icon */
+.google_icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Hover effects */
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}

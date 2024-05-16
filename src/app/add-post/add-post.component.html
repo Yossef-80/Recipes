@@ -1,0 +1,96 @@
+<div class="container">
+    <button [routerLink]="['/profile']" class="cancelpage">✖</button>
+    <h1>Post Recipe</h1>
+    <!--
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="recipe-title">Recipe Title</label>
+            <input type="text" name="recipe-title" id="recipe-title" required>
+        </div>
+        <div class="form-group">
+            <label for="recipe-photo">Recipe Photo</label>
+            <input type="file" name="recipe-photo" id="recipe-photo" required>
+        </div>
+        <h2>Recipe Ingredients</h2>
+        <div class="ingredients-list">
+          <input type="text" name="ingredient[]" id="ingredient" placeholder="Ingredient" required>
+        </div>
+        <h2>Recipe Cooking Steps</h2>
+        <div class="cooking-steps">
+          <textarea name="step[]" id="step-textarea" rows="4" placeholder="Step" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="category">Ingredients Category</label>
+            <select name="category" id="category" [(ngModel)]="Category" required>
+                <option value="" disabled selected>Select category</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="time">Time (minutes)</label>
+            <input type="number" name="time" id="time" [(ngModel)]="time" required>
+        </div>
+        <div class="form-group">
+            <label for="cuisine">Cuisine</label>
+            <select name="cuisine" id="cuisine" required>
+              <option value="" disabled selected>Select Cuisine</option>
+              <option value="Italian">Italian</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Chinese">Chinese</option>
+            </select>
+        </div>
+        <button type="submit" [routerLink]="['/profile']" (click)="addRecipeFun()">Post Recipe</button>
+    </form>
+-->
+
+
+<form action="#" method="post">
+    <div class="form-group">
+        <label for="recipe-title">Recipe Title</label>
+        <input type="text" name="recipe-title" id="recipe-title" [(ngModel)]="recipeName" required>
+    </div>
+    <div class="form-group">
+        <label for="recipe-photo">Recipe Photo</label>
+        <input type="file" name="recipe-photo" id="recipe-photo" (change)="onFileSelected($event)" required>
+    </div>
+    <!-- Recipe Ingredients -->
+    <!-- Add ngModel for two-way data binding to an array property -->
+    <h2>Recipe Ingredients</h2>
+    <div class="ingredients-list">
+        <input type="text" name="ingredient[]" id="ingredient" placeholder="Ingredient" [(ngModel)]="recipeIngredients" required>
+    </div>
+    <!-- Recipe Cooking Steps -->
+    <!-- Add ngModel for two-way data binding to an array property -->
+    <h2>Recipe Cooking Steps</h2>
+    <div class="cooking-steps">
+        <textarea name="step[]" id="step-textarea" rows="4" placeholder="Step" [(ngModel)]="recipeCookingSteps" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="category">Ingredients Category</label>
+        <select name="category" id="category" [(ngModel)]="Category" required>
+            <option value="" disabled selected>Select category</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Protien">Protien</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="time">Time (minutes)</label>
+        <input type="number" name="time" id="time" [(ngModel)]="time" required>
+    </div>
+    <div class="form-group">
+        <label for="cuisine">Cuisine</label>
+        <select name="cuisine" id="cuisine" [(ngModel)]="cuisine" required>
+            <option value="" disabled selected>Select Cuisine</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Chinese">Chinese</option>
+        </select>
+    </div>
+    <!-- You may need additional code for displaying the image preview -->
+    <button type="submit" (click)="addRecipeFun()">Post Recipe</button>
+</form>
+  </div>
+  

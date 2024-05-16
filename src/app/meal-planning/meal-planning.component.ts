@@ -24,32 +24,13 @@ export class MealPlanningComponent implements OnInit{
  recipeService:DatabaseService=inject(DatabaseService);
 
   constructor(private recipesService:DatabaseService) {
-   // this.list_of_food = this.foodService.getAllFood();
-   //this.recipeService.fill_Database2(this.foodService.getAllFood());
-   //this.recipesService.addRecipeToUser("-Nwr6m-RX3LzMU2X5rdS",{country:"england"})
-    //this.fillDatabase();
-   // this.imageUrl$=this.getImagePath("/recipes/burger.jpeg");
-   // this.uploadImages();
-  //  this.list_of_food=this.recipeService.readDatabase();
- // this.getIngredientsOfRecipe();
- //this.getCookingSteps();
-
-    //console.log(this.list_of_food);
-    //console.log(this.ingredients);
-     //this.rateRecipe();
-    // this.getNutiritionFacts();
-    //this.insertRecipes();
-    //this.getMealPlans();
-    //this.getSelectedMeals();
-    //this.testUploadRecipe();
-   // this.getSelectedMealPlans();
+ 
 
   }
   selectCuisine(cuisine:string)
   {
     this.recipesService.getRecipeByCousine(cuisine);
-    //this.testUploadRecipe();
-   // this.rateRecipe();
+  
   }
   /*
   getShopping()

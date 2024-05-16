@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fafafa;
-    position: relative; /* Ensure relative positioning for overlay */
+    position: relative; 
   }
   
-  /* Header Styles */
+  
   .profile {
     max-width: 1050px;
     margin: 0 auto;
@@ -94,9 +94,9 @@ body {
   
   .divider {
     border-top: 1px solid #ddd;
-    /* Adjust the color and style as needed */
+    
     margin: 20px 0;
-    /* Add margin for spacing */
+    
   }
   
   .divide {
@@ -121,12 +121,12 @@ body {
   
   .recipe-image {
     width: 100%;
-    /* Ensures the image fills its container */
+    
     height: 260px;
-    /* Adjust the height as needed */
+    
     border-radius: 15px;
     object-fit: fill;
-    /* Ensures the image covers its container */
+    
   }
   
   .recipe-name {
@@ -161,9 +161,9 @@ body {
     bottom: 0;
     right: 0;
     text-align: right;
-    /* Align text to the right */
+    
     vertical-align: bottom;
-    /* Align text to the top */
+    
   }
   
   .rating {
@@ -173,11 +173,11 @@ body {
     bottom: 0;
     right: 0;
     text-align: right;
-    /* Align text to the right */
+   
     vertical-align: bottom;
   }
   
-  /* Edit Profile Styles */
+ 
   .edit-profile {
     position: fixed;
     top: 50%;
@@ -188,7 +188,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     z-index: 9999;
-    /* Ensure it's above other content */
+   
   }
   .cancelpage{
     position: absolute;
@@ -236,8 +236,8 @@ body {
   
   
   .sava-cancel {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Align items with space between them */
+    display: flex;
+    justify-content: center; 
   }
   
   .save,

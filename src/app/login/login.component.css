@@ -60,7 +60,7 @@
     background-color: #0056b3; 
   }
   */
-  /* Body container */
+ 
 .body {
   display: flex;
   justify-content: center;
@@ -69,7 +69,7 @@
   background-color: #f7f7f7;
 }
 
-/* Sign in container */
+
 .sign_in {
   display: flex;
   background-color: #fff;
@@ -81,19 +81,16 @@
   width: 50%;
   
 }
-/* Image section */
 .img_sign img {
   width: 100%;
   height: auto;
   border-radius: 10px 0 0 10px;
 }
 
-/* Sign content section */
 .sign_content {
   padding: 20px;
 }
 
-/* Form */
 .form-control {
   width: 100%;
   padding: 10px;
@@ -106,7 +103,7 @@
   margin-left: 5px;
 }
 
-/* Buttons */
+
 .btn {
   width: 100%;
   padding: 10px;
@@ -116,13 +113,13 @@
   cursor: pointer;
 }
 
-/* Primary button */
+
 .btn-primary {
   background-color: #007bff;
   color: #fff;
 }
 
-/* Secondary button */
+
 .btn-secondary {
   background-color: #6c757d;
   color: #fff;
@@ -131,14 +128,14 @@
   justify-content: center;
 }
 
-/* Google icon */
+
 .google_icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-/* Hover effects */
+
 .btn-primary:hover {
   background-color: #0056b3;
 }

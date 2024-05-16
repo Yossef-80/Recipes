@@ -1,11 +1,10 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Body and font styles */
+
   body {
     font-family: Arial, sans-serif;
   }
@@ -22,14 +21,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 40px; /* Adjusted padding */
+    padding: 20px 40px; 
   }
   
   .left-side {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding: 20px 40px; /* Adjusted padding */
+    align-items: center; 
+    padding: 20px 40px; 
   }
   
   .right-side {
@@ -40,20 +39,20 @@
     max-height: 50%;
     margin-top: 160px;
     margin-right: 80px;
-    background-color: #85bd15; /* Green background color */
-    border-radius: 50%; /* Makes the border circular */
+    background-color: #85bd15;
+    border-radius: 50%; 
     padding:0;
   }
   
   h1 {
     font-size: 36px;
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 20px; 
   }
   
   p {
     font-size: 18px;
-    margin-bottom: 20px; /* Reduced margin */
-    text-align: center; /* Center text */
+    margin-bottom: 20px;
+    text-align: center;
   }
   
   .buttons {
@@ -64,15 +63,15 @@
     padding: 10px 20px;
     margin-right: 10px;
     font-size: 16px;
-    background-color: #85bd15; /* Changed button background to green */
-    border-radius: 30px; /* Added border-radius to the last button */
-    color: #fff; /* Changed button text color to white */
+    background-color: #85bd15;
+    border-radius: 30px; 
+    color: #fff; 
     border: none;
   }
   
   
   .left-side > * {
-    margin-bottom: 60px; /* Added margin between elements */
+    margin-bottom: 60px; 
   }
   
   .right-side img {

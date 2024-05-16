@@ -536,14 +536,12 @@ export   class DatabaseService {
 
 
   recordUserData(uid: string,name?:string) {
-    // Check if the user already exists in the Realtime Database
     this.db.object(`users/${uid}`).valueChanges().subscribe(userData => {
       if (!userData) {
         if(name==undefined)
           {
             name="";
           }
-        // If the user does not exist, create a new entry
         const userData = {
           userName:name,
           img:"",
@@ -551,12 +549,10 @@ export   class DatabaseService {
           mealPlanning:[],
           followers:0,
           following:0,
-          recipeCount:0,
+          recipeCount:0,  
           favouriteMeals:[],
-          // Add more user data if needed
         };
   
-        // Write user data to the Realtime Database using UID as the key
         this.db.object(`users/${uid}`).update(userData)
           .then(() => console.log('User data recorded in Realtime Database'))
           .catch(error => console.error('Error recording user data:', error));
@@ -638,10 +634,9 @@ export   class DatabaseService {
     })   ;
     const waitTime = 1700;
      this.increaseFollowings(userId);
-    // Use the setTimeout function to wait for the specified time
     await new Promise<void>((resolve) => {
       setTimeout(() => {
-        resolve(); // Resolve the promise after waiting
+        resolve(); 
       }, waitTime);
     });
      await this.db.list(followedPath+"/followersList/").push({userName:followerName,img:followerImage,key:followerKey})
@@ -694,10 +689,9 @@ export   class DatabaseService {
     })
     const waitTime = 1700;
      this.increaseFollowers(toFollow);
-    // Use the setTimeout function to wait for the specified time
     await new Promise<void>((resolve) => {
       setTimeout(() => {
-        resolve(); // Resolve the promise after waiting
+        resolve();
       }, waitTime);
     });
       this.db.list(followerPath+"/followingList/").push({userName:followedName,img:followedImage,key:followedKey})
@@ -749,19 +743,18 @@ try {
       const path='/users/'+userId;
       this.db.object(path).update({ img:imgUrl,userName:name})
         .then(() => {
-          resolve(); // Resolve the promise when the push operation is successful
+          resolve(); 
         })
         .catch(error => {
-          reject(error); // Reject the promise if there's an error
+          reject(error); 
         });
     });
   }
   uploadUserImage(file: File): Promise<string> {
-    const filePath = `users/${file.name}`; // Path where the image will be stored in Firebase Storage
+    const filePath = `users/${file.name}`;
     const fileRef = this.storage.ref(filePath);
-    const task = fileRef.put(file); // Upload the file
+    const task = fileRef.put(file); 
   
-    // Return a promise that resolves with the download URL of the uploaded image
     return new Promise((resolve, reject) => {
       task.snapshotChanges().pipe(
         finalize(() => {
@@ -871,14 +864,12 @@ try {
     followerListRef.snapshotChanges().subscribe(followerList => {
          userToBeUnfollowed= followerList.find(user => user.payload.val().key === userWhoUnfollowKey);
         
-        // If the user is found in the followingList, remove it
        
     });
    // const waitTime = 1700;
-    // Use the setTimeout function to wait for the specified time
     await new Promise<void>((resolve) => {
       setTimeout(() => {
-        resolve(); // Resolve the promise after waiting
+        resolve(); 
       }, waitTime);
     });
     if (userToBeUnfollowed) {

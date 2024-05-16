@@ -55,14 +55,12 @@
         <label for="recipe-photo">Recipe Photo</label>
         <input type="file" name="recipe-photo" id="recipe-photo" (change)="onFileSelected($event)" required>
     </div>
-    <!-- Recipe Ingredients -->
-    <!-- Add ngModel for two-way data binding to an array property -->
+    
     <h2>Recipe Ingredients</h2>
     <div class="ingredients-list">
         <input type="text" name="ingredient[]" id="ingredient" placeholder="Ingredient" [(ngModel)]="recipeIngredients" required>
     </div>
-    <!-- Recipe Cooking Steps -->
-    <!-- Add ngModel for two-way data binding to an array property -->
+   
     <h2>Recipe Cooking Steps</h2>
     <div class="cooking-steps">
         <textarea name="step[]" id="step-textarea" rows="4" placeholder="Step" [(ngModel)]="recipeCookingSteps" required></textarea>
@@ -89,7 +87,7 @@
             <option value="Chinese">Chinese</option>
         </select>
     </div>
-    <!-- You may need additional code for displaying the image preview -->
+   
     <button type="submit" (click)="addRecipeFun()">Post Recipe</button>
 </form>
   </div>
